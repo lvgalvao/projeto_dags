@@ -6,8 +6,6 @@ from datetime import datetime
 
 import requests
 
-
-
 API = "https://www.boredapi.com/api/activity"
 
 @dag(dag_id="pegar_um_personagem_airflow",
