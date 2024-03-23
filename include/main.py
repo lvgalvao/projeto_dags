@@ -1,10 +1,10 @@
 import time
 import random
-from controller import fetch_pokemon_data, add_pokemon_to_db
+from controller import fetch_pokemon_data, add_pokemon_to_db, gerar_numero_aleatorio
 
 def main():
     while True:
-        pokemon_id = random.randint(1, 350)  # Gera um ID aleatório entre 1 e 350
+        pokemon_id = gerar_numero_aleatorio()  # Gera um ID aleatório entre 1 e 350
         pokemon_schema = fetch_pokemon_data(pokemon_id)
         if pokemon_schema:
             print(f"Adicionando {pokemon_schema.name} ao banco de dados.")
