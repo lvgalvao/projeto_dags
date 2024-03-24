@@ -1,5 +1,5 @@
 import requests
-from db import SessionLocal, engine, Base
+from .db import SessionLocal, engine, Base
 from .models import Pokemon
 from .schema import PokemonSchema
 from random import randint
