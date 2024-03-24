@@ -7,7 +7,8 @@ from datetime import datetime
 @dag(dag_id="capturar_pokemon",
      description="pipeline_para_capturar_pokemon",
      start_date=datetime(2024,3,23),
-     schedule="* * * * *")
+     schedule="* * * * *",
+     catchup=False)
 def capturar_pokemon():
 
     @task(task_id='gerar_numero_aleatorio')
